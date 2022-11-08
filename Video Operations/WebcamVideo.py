@@ -3,7 +3,7 @@
 import cv2
 
 cap = cv2.VideoCapture(0,cv2.CAP_DSHOW)
-path = input("Enter the path where you want to save the video. Also enter the file name and extension of the video.")
+path = input("Enter the path where you want to save the video.")+ input("Enter file name with extension")
 
 #DIVX, XVID, MJPG, X264, WMV1, WMV2
 fourcc = cv2.VideoWriter_fourcc(*"XVID")
