@@ -1,4 +1,4 @@
-# Video Operation using OpenCV
+# Program to process video from local files
 
 import cv2
 
