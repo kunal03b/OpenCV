@@ -2,7 +2,7 @@
 
 import cv2
 
-camera = "http://100.92.65.50:8080/"
+camera = input("Enter IP address: ")
 # path = input("Enter the path where you want to save the file: ")
 
 cap = cv2.VideoCapture(0)
@@ -21,7 +21,7 @@ while cap.isOpened():
         cv2.imshow('frame', frame)
         gray = cv2.cvtColor(frame,cv2.COLOR_BGR2GRAY)
         cv2.imshow('gray', gray)
-        output.write(frame)
+        # output.write(frame)
         # To exit the video capture. Here in waitkey 1 is used to for dynamic capture i.e. video and 0 is used for image capture
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
