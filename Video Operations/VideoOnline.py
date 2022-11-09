@@ -12,14 +12,16 @@ cap = cv2.VideoCapture(0)
 cap.open(data.url)
 print("Loading...",cap.isOpened)
 
+# To save the video in Local files.
+#CODEC = DIVX, XVID, MJPG, X264, WMV1, WMV2
 fourcc = cv2.VideoWriter_fourcc(*"XVID")
 output = cv2.VideoWriter(path,fourcc,50.0,(700,700)) 
 
 while cap.isOpened():
     ret, frame = cap.read()
     if ret == True:
-        # commented because frame already taken while saving video in above code
-        frame = cv2.resize(frame(500,500))
+        # frame is commented because it is already taken while saving video in above code
+        # frame = cv2.resize(frame(500,500))
         cv2.imshow('frame', frame)
         gray = cv2.cvtColor(frame,cv2.COLOR_BGR2GRAY)
         cv2.imshow('gray', gray)
