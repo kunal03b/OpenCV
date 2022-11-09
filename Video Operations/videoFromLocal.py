@@ -14,9 +14,9 @@ while(True):
     cv2.imshow("frame",frame)
     cv2.imshow("GrayScale Image",gray)
     cv2.waitKey(25)   #here 25 is the playback speed i.e. the less will be the value the more will be the speed of video
-    # k = cv2.waitKey(25)
-    # if k == ord('e'):
-    #     break
+    k = cv2.waitKey(25)
+    if k == ord('e'):
+        break
 
 cap.release()
 cv2.destroyAllWindows()
