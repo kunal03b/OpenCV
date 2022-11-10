@@ -1,4 +1,4 @@
-# Mouse Operation
+# Mouse Operation to calculate the coordinates of the screen
 
 import cv2
 import numpy as np
