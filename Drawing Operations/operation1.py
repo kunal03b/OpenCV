@@ -31,13 +31,6 @@ cv2.setMouseCallback('res',mouse_event)
 
 while True:
     cv2.imshow("res",img)
-    if cv2.waitKey(1) & 0xFF == ord('q'):
+    if cv2.waitKey(1) & 0xFF == 27: #27 is used to exit the window with esc i.e. 27 = esc
         break
 cv2.destroyAllWindows()        
-
-
-
-cv2.namedWindow(winname="res")
-
-img = np.zeros((512,512,3),np.uint8)
-cv2.setMouseCallback('res',draw)
