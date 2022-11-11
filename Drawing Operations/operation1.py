@@ -1,4 +1,4 @@
-# Mouse Operation to calculate the coordinates of the screen
+# Mouse Operation to calculate the coordinates of the screen and the color codes.
 
 import cv2
 import numpy as np
@@ -14,7 +14,8 @@ def mouse_event(event,x,y,flag,param):
 
         cord = ". "+str(x) + ", "+str(y)
         cv2.putText(img,cord,(x,y),font,1,(155,125,100),2)
-        cv2.imshow('image',img)
+        # to open the coordinates in new window :-
+        #  cv2.imshow('image',img)
     if event == cv2.EVENT_RBUTTONDOWN:
         b = img[y,x,0]
         g = img[y,x,1]
@@ -22,7 +23,7 @@ def mouse_event(event,x,y,flag,param):
 
         color_bgr = "." + str(b) + ',' + str(g) + ',' + str(r)
         cv2.putText(img,color_bgr,(x,y),font,1,(152,255,130),2)
-        cv2.imshow('image',img)
+        # cv2.imshow('image',img)
 
 cv2.namedWindow(winname="res")
 
