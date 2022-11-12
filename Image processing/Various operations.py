@@ -17,5 +17,13 @@ cv2.imshow("green",g)
 cv2.imshow("red",r)
 cv2.imshow("Original image",img)
 
+
+# TO merge the splitted images
+merged = cv2.merge((r,g,b))
+cv2.imshow("Merged Image",merged)
+
+merged2 = cv2.merge((b,g,r))
+cv2.imshow("Merged Image",merged2)
+
 cv2.waitKey()
 cv2.destroyAllWindows
