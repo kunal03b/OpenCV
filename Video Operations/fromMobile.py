@@ -1,4 +1,5 @@
 # Video Capturing from Mobile's Camera
+# for this you have to install IP camera in your mobile.
 
 import cv2
 
