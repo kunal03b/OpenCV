@@ -15,6 +15,11 @@ kernel = np.ones((5,5),np.float32)/25     #kernel(a small matrix) is used to ach
 h_filter = cv2.filter2D(img,-1,kernel)   #-1 is the depth of the filter.
 cv2.imshow("Homogeneous filter", h_filter)
 
+# --------Blur filter---------
+# takes the average of all the pixels under kernel area and rplaces the central element with this average.
+blur = cv2.blur(img,(5,5))   #taken image and kernel as parameter
+cv2.imshow("Blur filter", blur)
+
 
 k = cv2.waitKey(1) & 0xFF
 if k == 27:
