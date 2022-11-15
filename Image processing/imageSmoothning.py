@@ -20,6 +20,10 @@ cv2.imshow("Homogeneous filter", h_filter)
 blur = cv2.blur(img,(5,5))   #taken image and kernel as parameter
 cv2.imshow("Blur filter", blur)
 
+# --------Gaussian filter---------
+# value of side pixels are less than that of the center pixels.
+gau = cv2.GaussianBlur(img,(5,5),0)    #0 is sigma x value....It decides the spacing between the pixels.
+
 
 k = cv2.waitKey(1) & 0xFF
 if k == 27:
