@@ -30,6 +30,11 @@ gau = cv2.GaussianBlur(img,(5,5),0)    #0 is sigma x value....It decides the spa
 med = cv2.medianBlur(img,5)
 cv2.imshow("Median Filter",med)
 
+# --------Bilateral filter---------
+# best filter to remove noise. but very slow.
+BL = cv2.bilateralFilter(img,9,75,75)    #paramerter are img,neighbour-pixel-diameter,sigma-color,sigma-space.
+cv2.imshow("Bilateral Filter",BL)
+
 k = cv2.waitKey(1) & 0xFF
 if k == 27:
     break
