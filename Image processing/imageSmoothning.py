@@ -24,6 +24,11 @@ cv2.imshow("Blur filter", blur)
 # value of side pixels are less than that of the center pixels.
 gau = cv2.GaussianBlur(img,(5,5),0)    #0 is sigma x value....It decides the spacing between the pixels.
 
+# --------Median filter-----------
+# compute the median of all the pixels under kernel area and rplace the central element with this median.
+# It removes salt-paper noise.
+med = cv2.medianBlur(img,5)
+cv2.imshow("Median Filter",med)
 
 k = cv2.waitKey(1) & 0xFF
 if k == 27:
