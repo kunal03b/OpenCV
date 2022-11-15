@@ -35,7 +35,5 @@ cv2.imshow("Median Filter",med)
 BL = cv2.bilateralFilter(img,9,75,75)    #paramerter are img,neighbour-pixel-diameter,sigma-color,sigma-space.
 cv2.imshow("Bilateral Filter",BL)
 
-k = cv2.waitKey(1) & 0xFF
-if k == 27:
-    break
+cv2.waitKey(0)
 cv2.destroyAllWindows()
