@@ -21,6 +21,10 @@ lap = np.uint8(np.absolute(lap))    #used to remove the noise from the image.
 # SobeLX focus on vertical lines. and SobeLY focus on horizontal lines.
 sobelx = cv2.Sobel(img_gray,cv2.CV_64F,1,0)
 sobely = cv2.Sobel(img_gray,cv2.CV_64F,0,1)
+sobelx = np.uint8(np.absolute(sobelx))
+sobely = np.uint8(np.absolute(sobely))
+
+Combined = cv2.bitwise_or()
 
 cv2.imshow("Original image",img)
 cv2.imshow("Gray Image",img_gray)
