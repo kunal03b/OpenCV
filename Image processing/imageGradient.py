@@ -14,9 +14,19 @@ img_gray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
 lap = cv2.Laplacian(img_gray,cv2.CV_64F,ksize=1)     #parameters are (img,data_type for -ve val,ksize)
 lap = np.uint8(np.absolute(lap))    #used to remove the noise from the image.
 
+
+# ------------------------SobeL Operations--------------------------
+# SobeL operation is a joint Gaussian smoothing plus differentiation operation. It is more resistant to noise.
+# parameters(img,type for -ve val,x = 1,y = 0,ksize)
+# SobeLX focus on vertical lines. and SobeLY focus on horizontal lines.
+sobelx = cv2.Sobel(img_gray,cv2.CV_64F,1,0)
+sobely = cv2.Sobel(img_gray,cv2.CV_64F,0,1)
+
 cv2.imshow("Original image",img)
 cv2.imshow("Gray Image",img_gray)
 cv2.imshow("Laplacian Image",lap)
+cv2.imshow("SobelX Image",sobelx)
+cv2.imshow("SobelY Image",sobely)
 
 cv2.waitKey(0)
 cv2.destroyAllWindows()
