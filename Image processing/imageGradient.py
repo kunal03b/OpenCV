@@ -32,7 +32,5 @@ cv2.imshow("Laplacian Image",lap)
 cv2.imshow("SobelX Image",sobelx)
 cv2.imshow("SobelY Image",sobely)
 
-k = cv2.waitKey(0) & 0xFF
-if k == 27:
-    break
+cv2.waitKey(0)
 cv2.destroyAllWindows()
