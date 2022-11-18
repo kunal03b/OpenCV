@@ -22,5 +22,16 @@ cv2.imshow("Pyramid Down 2",pyDown2)
 cv2.imshow("Pyramid Up 1",pyUP1)
 cv2.imshow("Pyramid Up 2",pyUP2)
 
+# # to perform this with loop:-
+# imgCopy = cv2.copy(img)
+# data = [imgCopy]
+# for i in range(4):
+#     imgCopy = cv2.pyrDown(imgCopy)
+#     data.append(imgCopy)
+#     cv2.imshow("Pyramid Down "+str(i),imgCopy)
+
 cv2.waitKey(0)
 cv2.destroyAllWindows()
+
+
+
