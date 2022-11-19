@@ -25,7 +25,7 @@ cv2.imshow("Merged Image",merged)
 merged2 = cv2.merge((b,g,r))
 cv2.imshow("Merged Image",merged2)
 
-# ----------------------------------------------Create Border of an image--------------------------------------------------------
+# ----------------------------------------------Create Border of an image---------------------------------------------------------
 border = cv2.copyMakeBorder(img,10,10,6,6,cv2.BORDER_CONSTANT,value=[26,55,7])
 cv2.imshow("Bordered Image",border)
 
