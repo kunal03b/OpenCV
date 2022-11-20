@@ -40,7 +40,7 @@ while True:
     # filter mask with image
     res = cv2.bitwise_and(frame,frame,mask=mask)   #color will be reflected by mask variable as upper and lower bound values are stored in mask
     
-    k = cv2.waitKey(25) & 0xFF
+    k = cv2.waitKey(0) & 0xFF
     if k == 27:
         break
 
