@@ -51,6 +51,7 @@ while True:
     cnts,hier = cv2.findContours(thresh,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
 
     frame = cv2.drawContours(frame,cnts,-1,(176,10,15),-4)
+    
 
     cv2.imshow("result",frame)
     cv2.imshow("Mask",mask)
@@ -62,5 +63,3 @@ while True:
         break
 
 cv2.destroyAllWindows()
-
-    
